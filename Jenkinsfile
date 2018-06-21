@@ -5,8 +5,7 @@ pipeline{
             steps{
                 sh 'mvn clean package sonar:sonar'
             }
-        
-            
+                    
             post {
                 success {
                     echo 'Now archiving....'
