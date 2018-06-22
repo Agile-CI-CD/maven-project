@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Build && SonarQube analysis'){
             steps{
-                sh 'mvn clean package sonar:sonar -Dsonar.host.url=http://34.229.122.119:9000'
+                sh 'mvn clean package sonar:sonar -Dsonar.projectKey=my-proj -Dsonar.projectName=test-job -Dsonar.projectVersion=1.0 -Dsonar.sources=. -Dsonar.login=8e1edff9c581e4738076ef95731a38abf2b640e7 -Dsonar.host.url=http://34.229.122.119:9000'
             }
                     
             post {
